@@ -1,0 +1,2 @@
+karachi, 2300000, Altaf 
+Islamabad, 23222291, Ashraf 
