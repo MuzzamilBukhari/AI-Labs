@@ -53,5 +53,5 @@ def solve_n_queens(n):
 
 
 # You can test with any number of queens:
-n = 6
+n = 4
 solve_n_queens(n)

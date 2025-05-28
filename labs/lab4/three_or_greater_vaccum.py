@@ -1,3 +1,5 @@
+import random
+
 class Room:
     def __init__(self, location, status="dirty"):
         self.location = location
@@ -5,7 +7,8 @@ class Room:
 
 class Environment:
     def __init__(self, agent, n_rooms=3):
-        self.rooms = [Room(chr(65 + i)) for i in range(n_rooms)]  # 'A', 'B', 'C', ...
+        options = ["clean", "dirty"]
+        self.rooms = [Room(chr(65 + i), random.choice(options)) for i in range(n_rooms)]  # 'A', 'B', 'C', ...
         self.agent = agent
         self.current_index = 0
         self.step = 1

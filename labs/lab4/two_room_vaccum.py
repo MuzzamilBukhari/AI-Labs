@@ -52,8 +52,8 @@ class Environment(ABC):
 # TwoRoomVacuumCleanerEnvironment class
 class TwoRoomVacuumCleanerEnvironment(Environment):
     def __init__(self, agent):
-        self.r1 = Room('A', 'dirty')
-        self.r2 = Room('B', 'dirty')
+        self.r1 = Room('A')
+        self.r2 = Room('B')
         self.agent = agent
         self.currentRoom = self.r1
         self.delay = 1000
@@ -90,4 +90,9 @@ class TwoRoomVacuumCleanerEnvironment(Environment):
 if __name__ == '__main__':
     vcagent = VacuumAgent()
     env = TwoRoomVacuumCleanerEnvironment(vcagent)
-    env.executeStep(10)
+    env.displayPerception()
+    env.displayAction()
+    env.executeStep(3)
+
+
+    env.executeStep(3)  # Execute 3 steps
